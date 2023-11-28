@@ -14,7 +14,7 @@ export const styles = StyleSheet.create({
 
     },
     content: {
-        fontSize: 20,
+        fontSize: 16,
 
     }
 
@@ -31,7 +31,7 @@ export default function Home({ navigation }) {
             </View> */}
 
             <Text style={styles.content}>
-                Bem-vindo
+                Bem-vindo! :)
             </Text>
             <View style={{ marginTop: 10 }} />
             <Button
@@ -40,14 +40,10 @@ export default function Home({ navigation }) {
                 title="Ir para Bussola"
             />
             <View style={{ marginTop: 10 }} />
-            {/* <Button 
-                // mode="contained"
-                onPress={() => navigation.navigate('BatteryInfo')}
-                title="Ir para Bateria e afins"
-                
-            />
-            <View style={{ marginTop: 10 }} />
-            */}
+            <Text style={styles.content}>
+                Desenvolvido por Isabella Schmitz & Maria Isadora
+            </Text>
+            
 
         </View>
     )
