@@ -1,14 +1,15 @@
 import { StyleSheet, View, Text } from "react-native";
-import {Magnetometer} from "expo-sensors";
+import { Magnetometer } from "expo-sensors";
 import { useEffect, useState } from "react";
+import { Title } from "react-native-paper";
 // import { Title } from "react-native-paper";
-const styles =  StyleSheet.create({
+const styles = StyleSheet.create({
     // fazer o style aqui depois
     container: {
-      flex: 1,
-      justifyContent: "center",
-      top: -90,
-     
+        flex: 1,
+        justifyContent: "center",
+        top: -90,
+
     },
     content: {
         fontSize: 20,
@@ -16,13 +17,13 @@ const styles =  StyleSheet.create({
     },
 });
 export default function Bussola() {
-    
+
     const [magnetometro, setMagneto] = useState({});
-    
+
 
     useEffect(() => {
         Magnetometer.addListener(magnetometroListener);
-        
+
         return () => {
             Magnetometer.removeAllListeners();
         }
@@ -31,13 +32,13 @@ export default function Bussola() {
     const magnetometroListener = (data) => {
         setMagneto(data);
     }
-   
+
     return (
         <View style={styles.container}>
-            <View style={{ backgroundColor: "green" }}> 
-                <Header title="Orientação"/>
+            <View style={{ backgroundColor: "green" }}>
+                {/* <Header title="Orientação"/> */}
             </View>
-           
+
             <View style={styles.content}>
                 <Text style={styles.sensor}>
                     <Title>Magnetômetro</Title>
@@ -49,10 +50,8 @@ export default function Bussola() {
                     Z: {magnetometro.z}
                     {'\n'}
                     {'\n'}
-                    
                 </Text>
             </View>
-           
         </View>
     );
 }
