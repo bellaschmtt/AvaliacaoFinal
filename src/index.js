@@ -13,18 +13,13 @@ export default function RootNavigation() {
         <Stack.Screen
           name="home"
           component={Home}
-          options={{ title: "Bem vindo" }}
+          options={{ title: "Atividade Final do Tecnico de INFO" }}
         />
         <Stack.Screen
           name="bussola"
           component={Bussola}
           options={{ title: "Bussola" }}
         />
-        {/* <Stack.Screen
-          name="DeviceInfo"
-          // component={DeviceInfo}
-          options={{ title: "bussola" }}
-        /> */}
 
       </Stack.Navigator>
     </NavigationContainer>
