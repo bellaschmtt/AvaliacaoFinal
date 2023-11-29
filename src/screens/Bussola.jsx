@@ -3,6 +3,7 @@ import { Magnetometer } from "expo-sensors";
 import { useEffect, useState } from "react";
 import { Title } from "react-native-paper";
 // import { Title } from "react-native-paper";
+// socorro
 const styles = StyleSheet.create({
     // fazer o style aqui depois
     container: {
