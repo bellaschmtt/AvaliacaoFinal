@@ -1,50 +1,50 @@
-import { View, StyleSheet, Text, Button } from 'react-native';
-// import Header from '../components/Header';
-// não precisa importar aqui as páginas
+import { StyleSheet, Text, View } from "react-native";
 
-export const styles = StyleSheet.create({
-    container: {
-        // backgroundColor: "purple",
-        //   flex: 1 ,
-        justifyContent: "center",
-        //   alignItems: "center",
-        padding: 10,
-        top: 10,
-
-
-    },
-    content: {
-        fontSize: 16,
-
-    }
-
-});
-
-
-export default function Home({ navigation }) {
-
-    return (
-        <View style={styles.container}>
-
-            {/* <View style={{ backgroundColor: "green" }}> 
-                <Header title="Orientação"/>
-            </View> */}
-
-            <Text style={styles.content}>
-                Bem-vindo! :)
-            </Text>
-            <View style={{ marginTop: 10 }} />
-            <Button
-                mode="contained"
-                onPress={() => navigation.navigate('bussola')}
-                title="Ir para Bussola"
-            />
-            <View style={{ marginTop: 10 }} />
-            <Text style={styles.content}>
-                Desenvolvido por Isabella Schmitz & Maria Isadora
-            </Text>
-            
-
-        </View>
-    )
+export default function Home() {
+  return (
+    <View style={styles.container}>
+      <View style={styles.header}>
+      </View>
+      <View style={styles.branco}>
+        <Text style={styles.title}>Isabella Schmitz e Maria Isadora</Text>
+        <Text style={styles.subTitle}>
+        Nossa dupla é formada pela Isabella e pela Maria Isadora como diz o titulo, ambas estudantes do terceiro ano do ensino médio integrado ao técnico em informática para internet pelo senac Joinville.
+        </Text>
+      </View>
+    </View>
+  );
 }
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    marginTop: 30,
+    backgroundColor: "#a600ff",
+  },
+  branco: {
+    backgroundColor: "#fff",
+    borderTopLeftRadius: 20,
+    borderTopRightRadius: 20,
+    height: "100%",
+  },
+
+  header: {
+    width: "100%",
+    height: 100,
+    backgroundColor: "#a600ff",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  title: {
+    fontSize: 20,
+    fontWeight: "bold",
+    textAlign: "center",
+    marginTop: 20,
+  },
+  subTitle: {
+    fontSize: 15,
+    textAlign: "justify",
+    marginTop: 20,
+    marginLeft: 20,
+    marginRight: 20,
+  },
+});
