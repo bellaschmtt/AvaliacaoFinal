@@ -18,7 +18,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     marginTop: 30,
-    backgroundColor: "#a600ff",
+    backgroundColor: "#FF69B4",
   },
   branco: {
     backgroundColor: "#fff",
@@ -30,7 +30,7 @@ const styles = StyleSheet.create({
   header: {
     width: "100%",
     height: 100,
-    backgroundColor: "#a600ff",
+    backgroundColor: "#FF69B4",
     alignItems: "center",
     justifyContent: "center",
   },

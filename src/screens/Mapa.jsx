@@ -47,16 +47,16 @@ const Mapa = () => {
 
     if (angle >= 45 && angle < 135) {
       compassDirection = 'Sul';
-      setBackgroundColor('#E03FD5');
+      setBackgroundColor('#F0F8FF');
     } else if (angle >= 135 || angle < -135) {
       compassDirection = 'Oeste';
-      setBackgroundColor('#70E03F');
+      setBackgroundColor('#FFF5EE');
     } else if (angle >= -135 && angle < -45) {
       compassDirection = 'Norte';
-      setBackgroundColor('#E0346A');
+      setBackgroundColor('#FAFAD2');
     } else {
       compassDirection = 'Leste';
-      setBackgroundColor('#E0BD36');
+      setBackgroundColor('#F0FFF0');
     }
   };
 
@@ -80,10 +80,10 @@ const Mapa = () => {
     initSensors();
   }, []);
 
-  return (
+  return ( 
     <View style={[styles.container, { backgroundColor }]}>
       <View style={styles.infoContainer}>
-        <Text style={styles.infoText}>
+        <Text style={styles.infoText}> 
           Magnetometro:{'\n'}
           z: {magnetometer?.z || 'Loading...'} {'\n'}
           {location ? (
@@ -95,7 +95,6 @@ const Mapa = () => {
           )}
         </Text>
       </View>
-
       <View style={styles.mapContainer}>
         {location && (
           <MapView
@@ -112,13 +111,13 @@ const Mapa = () => {
                 latitude: location.coords.latitude,
                 longitude: location.coords.longitude,
               }}
-              title="My Location"
-              description="This is where I am"
+              title="Minha localização"
+              description="Aqui é onde estou"
             />
           </MapView>
         )}
       </View>
-    </View>
+      </View>
   );
 };
 
@@ -139,6 +138,8 @@ const styles = StyleSheet.create({
   infoText: {
     fontSize: 18,
     fontWeight: 'bold',
+    textShadowColor: 'rgb(255,105,180)',
+    textShadowRadius:10,
   },
   map: {
     width: 300,

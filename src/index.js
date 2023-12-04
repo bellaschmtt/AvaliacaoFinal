@@ -10,11 +10,11 @@ export default function RootNavigation() {
   return (
     <NavigationContainer>
       <Stack.Navigator
-        activeColor="#f0edf6"
-        inactiveColor="#3e2465"
+        activeColor="#DDA0DD"
+        inactiveColor="#FFE4E1"
         labelStyle={{ fontSize: 12 }}
         style={{ backgroundColor: "red" }}
-        barStyle={{ backgroundColor: "#694fad" }}
+        barStyle={{ backgroundColor: "#FF69B4" }}
       >
         <Stack.Screen
           name="Home"
@@ -34,8 +34,7 @@ export default function RootNavigation() {
             tabBarIcon: ({ color }) => (
               <MaterialCommunityIcons name="map" color={color} size={26} />
             ),
-          }}
-        />
+          }} />
       </Stack.Navigator>
     </NavigationContainer>
   );
