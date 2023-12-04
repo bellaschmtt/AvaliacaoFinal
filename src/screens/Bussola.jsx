@@ -37,9 +37,9 @@ export default function Bussola() {
 
     return (
         <View style={styles.container}>
-            <View style={{ backgroundColor: "green" }}>
-                {/* <Header title="Orientação"/> */}
-            </View>
+            {/* <View style={{ backgroundColor: "green" }}>
+               
+            </View> */}
 
             <View style={styles.content}>
                 <Text style={styles.sensor}>
